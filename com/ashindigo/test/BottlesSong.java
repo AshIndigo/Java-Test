@@ -2,7 +2,7 @@ package com.ashindigo.test;
 
 public class BottlesSong {
 	
-	static int bottles = 10;
+	static int bottles = 260000000;
 	static int bottlesfinal = bottles;
 	static String word = "bottles";
 
