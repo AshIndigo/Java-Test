@@ -3,13 +3,12 @@ package com.ashindigo.test;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.StringJoiner;
 
 public class MiscToolsMain {
 	
 	static Scanner scanner = new Scanner(System.in);
-	static ArrayList alphabet = new ArrayList();
-	static ArrayList keys = new ArrayList();
+	static ArrayList<String> alphabet = new ArrayList<String>();
+	static ArrayList<String> keys = new ArrayList<String>();
 
 	public static void main(String[] args) {
 		
@@ -49,7 +48,7 @@ public class MiscToolsMain {
 		System.out.println("Please enter the length of your key");
 		int length = scanner.nextInt();
 		Random rand = new Random();
-		ArrayList array = new ArrayList();
+		ArrayList<Object> array = new ArrayList<Object>();
 		int runtime = 0;
 		while (runtime  < length) {
 			boolean rands = false;
@@ -65,7 +64,6 @@ public class MiscToolsMain {
 			
 		}
 		}
-		StringBuilder sb = new StringBuilder(array.toString());
 		String strings = new String(array.toString());
 		String word1 = strings.replace('[', '\0');
 		String strings1 = new String(word1);

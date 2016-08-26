@@ -10,10 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class CalculatorMain extends JFrame {
-	public CalculatorMain() {
-		
-	}
 	
 	/*
 	 * Variables for storing numbers and mode
@@ -26,12 +24,12 @@ public class CalculatorMain extends JFrame {
 	static int result = 0;
 	private static String contiinue = "If you are seeing this then something broke. gj m8";
 	private static int number3;
-	static ArrayList numb = new ArrayList();
+	static ArrayList<Integer> numb = new ArrayList<Integer>();
 	static JTextField magic = new JTextField();
 	static JTextField mainText = new JTextField();
 	static boolean enabled;
 	static int modegui = -1;
-	private static ArrayList numb2 = new ArrayList();
+	private static ArrayList<Integer> numb2 = new ArrayList<Integer>();
 	static int answer;
 
 	public static void main(String[] args) {
@@ -407,8 +405,8 @@ public class CalculatorMain extends JFrame {
 		    	  Long numb22 = null;
 			      numbb2 = numb2.toString().replaceAll("\\D","");
 			      numbb = numb.toString().replaceAll("\\D","");
-			      numb1 = numb1.parseLong(numbb);
-			      numb22 = numb22.parseLong(numbb2);
+			      numb1 = Long.parseLong(numbb);
+			      numb22 = Long.parseLong(numbb2);
 			      final int numb11 = numb1.intValue();
 			      final int numb222 = numb22.intValue();
 			      // Stop

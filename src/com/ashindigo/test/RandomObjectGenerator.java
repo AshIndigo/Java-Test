@@ -10,8 +10,8 @@ public class RandomObjectGenerator {
 	static Scanner scanner = new Scanner(System.in);
 	public static int mode = 0;
 	static Random rand = new Random();
-	static ArrayList word = new ArrayList();
-	static ArrayList alphabet = new ArrayList();
+	static ArrayList<String> word = new ArrayList<String>();
+	static ArrayList<String> alphabet = new ArrayList<String>();
 	
 	public static void main(String[] args) {
 		
@@ -48,7 +48,7 @@ public class RandomObjectGenerator {
 		length = scanner.nextInt();
 		if (length != 0){
 		int runtime = 0;
-		ArrayList numb = new ArrayList();
+		ArrayList<Integer> numb = new ArrayList<Integer>();
 		while(runtime < length){
 			numb.add(rand.nextInt(10));
 			runtime++;

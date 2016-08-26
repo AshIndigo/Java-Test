@@ -1,19 +1,12 @@
 package com.ashindigo.test;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ListMain {
 	
-	static ArrayList main = new ArrayList();
+	static ArrayList<String> main = new ArrayList<String>();
 	static int length = main.size();
 	static Scanner scanner = new Scanner(System.in);
 

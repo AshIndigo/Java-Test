@@ -8,7 +8,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.swing.JButton;
@@ -16,7 +15,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JToolBar;
-import javax.swing.filechooser.FileFilter;
 
 public class TextEditorMain {
 
@@ -81,7 +79,6 @@ public class TextEditorMain {
 			    	pw.println(textbox.getText());
 			    	pw.close();
 				} catch (FileNotFoundException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 		      }
