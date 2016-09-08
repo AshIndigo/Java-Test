@@ -3,7 +3,6 @@ package com.ashindigo.test;
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.nio.file.Path;
 import java.util.Scanner;
 
 /**
@@ -30,8 +29,13 @@ public class ProgLauncher {
 			System.out.println(runtime + ": " + thisFile.list()[runtime]);
 			runtime++;
 		}
+		int numb = 0;
 		System.out.println("Please enter the number of the program you would like to load");
-		int numb = scanner.nextInt();
+		try {
+		numb = scanner.nextInt();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		try {
 			String[] params = null;
 			Method method = ClassLoader.getSystemClassLoader().loadClass("com.ashindigo.test." + thisFile.list()[numb].replace(".class", "")).getMethod("main", String[].class);
@@ -50,6 +54,5 @@ public class ProgLauncher {
 		} catch (InvocationTargetException e) {
 			e.printStackTrace();
 		}
-		
-	}
+}
 }
